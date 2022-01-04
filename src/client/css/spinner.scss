@@ -1,0 +1,6 @@
+#spinner {
+  display: none;
+  &.show {
+    display: block;
+  }
+}

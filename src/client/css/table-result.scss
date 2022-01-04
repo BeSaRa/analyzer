@@ -1,0 +1,7 @@
+#resultTable {
+  display: none;
+
+  &.show {
+    display: table;
+  }
+}
