@@ -1,14 +1,16 @@
 import "bootstrap/scss/bootstrap.scss"
 import "./css/spinner.scss"
 import "./css/table-result.scss"
-import {validateURL} from "./validateURL";
+import {isValidURL} from "./isValidURL";
 import {analyseUrl} from "./api";
+import {displayTable, hideTable} from "./table";
+import {displaySpinner, hideSpinner} from "./spinner";
 
 const properties = ['agreement', 'confidence', 'irony', 'model', 'score_tag', 'subjectivity'];
 
 export function handleSubmit(url, row) {
     hideTable();
-    if (!validateURL(url)) {
+    if (!isValidURL(url)) {
         alert('invalid url')
         return;
     }
@@ -26,33 +28,6 @@ export function handleSubmit(url, row) {
         })
 }
 
-function getTable() {
-    return document.getElementById('resultTable')
-}
-
-function getSpinner() {
-    return document.getElementById('spinner')
-}
-
-function displayTable() {
-    const table = getTable();
-    table.classList.add('show');
-}
-
-function hideTable() {
-    const table = getTable();
-    table.classList.remove('show');
-}
-
-function displaySpinner() {
-    const spinner = getSpinner();
-    spinner.classList.add('show');
-}
-
-function hideSpinner() {
-    const spinner = getSpinner();
-    spinner.classList.remove('show');
-}
 
 function renderResult(result, row) {
     row.innerHTML = '';
