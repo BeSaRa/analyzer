@@ -17,6 +17,10 @@ export function handleSubmit(url, row) {
     displaySpinner();
     analyseUrl(url)
         .then((res) => {
+            if (res.status && res.status.code !== '0') {
+                alert(res.status.msg);
+                return;
+            }
             displayTable();
             renderResult(res, row);
         })
