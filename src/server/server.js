@@ -9,6 +9,10 @@ app.use(cors());
 
 app.use(express.static('dist'))
 
+app.get('/', (_req, res) => {
+    res.sendFile('dist/index.html');
+})
+
 app.get('/api', async (req, res) => {
     const formData = new FormData();
     formData.append('key', API_KEY);
