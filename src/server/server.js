@@ -1,10 +1,9 @@
 require('dotenv').config();
 const express = require('express');
-const FormData = require('form-data');
 const cors = require('cors');
 const {externalApi} = require("./external-api");
 const app = express();
-const {API_KEY} = process.env;
+
 app.use(cors());
 
 app.use(express.static('dist'))
@@ -14,8 +13,6 @@ app.get('/', (_req, res) => {
 })
 
 app.get('/api', async (req, res) => {
-    const formData = new FormData();
-    formData.append('key', API_KEY);
     try {
         const result = await externalApi(req.query.url)
         res.send(result);
@@ -27,5 +24,5 @@ app.get('/api', async (req, res) => {
 
 
 app.listen(8000, () => {
-    console.log('listen to port :', 8000);
+    console.log('listen to port : http://localhost:8000');
 });
