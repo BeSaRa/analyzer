@@ -6,7 +6,8 @@
   "scripts": {
     "start": "nodemon src/server/server.js",
     "build": "webpack --config webpack.prod.js",
-    "dev": "webpack-dev-server --config webpack.dev.js --open"
+    "dev": "webpack-dev-server --config webpack.dev.js --open",
+    "test": "jest"
   },
   "keywords": [],
   "author": "Ahmed Mostafa",
@@ -18,6 +19,7 @@
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.5.1",
     "html-webpack-plugin": "^5.5.0",
+    "jest": "^27.4.5",
     "mini-css-extract-plugin": "^2.4.5",
     "nodemon": "^2.0.15",
     "sass": "^1.45.2",
