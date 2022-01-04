@@ -27,8 +27,7 @@ to run the backend nodemon server type the below command
 npm run start
 ```
 
-it will run backend server on port 8000 you can access it by `http://localhost:8000` and check if you get
-message `API Working` means your backend server ready for taking the requests from UI
+it will run backend the application on port 8000 you can access it by `http://localhost:8000`
 
 ### run the tool on dev server (webpack-dev-server)
 
