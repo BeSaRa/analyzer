@@ -1,5 +1,6 @@
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const WorkboxPlugin = require('workbox-webpack-plugin');
 module.exports = {
     mode: 'production',
     entry: './src/client/app.js',
@@ -29,5 +30,7 @@ module.exports = {
             template: "./src/views/index.html",
             filename: "index.html"
         }),
-        new MiniCssExtractPlugin()]
+        new WorkboxPlugin.GenerateSW(),
+        new MiniCssExtractPlugin()
+    ]
 }

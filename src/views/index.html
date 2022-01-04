@@ -55,5 +55,12 @@
 <footer class="bg-dark p-2">
     <div class="container text-center"><span class="text-white">copyrights reserved - Ahmed Mostafa</span></div>
 </footer>
+<script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/service-worker.js');
+        });
+    }
+</script>
 </body>
 </html>
