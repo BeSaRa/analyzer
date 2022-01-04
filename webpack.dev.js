@@ -32,11 +32,8 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: "./src/client/index.html",
-            filename: "index.html",
-            templateParameters: {
-
-            }
+            template: "./src/views/index.html",
+            filename: "index.html"
         }),
         new CleanWebpackPlugin({
             // Simulate the removal of files
