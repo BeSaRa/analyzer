@@ -7,11 +7,8 @@ const app = express();
 const {API_KEY} = process.env;
 app.use(cors());
 
-app.use(express.static('/dist'))
+app.use(express.static('dist'))
 
-app.get('/', (req, res) => {
-    res.send("API Working")
-})
 app.get('/api', async (req, res) => {
     const formData = new FormData();
     formData.append('key', API_KEY);
