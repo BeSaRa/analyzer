@@ -26,7 +26,7 @@ it will build the application inside `dist` folder inside the root project
 create `.env` file in the root project with the below environment variable
 
 ```shell
-API_KEY=<your MeaningCloud API Key from>
+API_KEY=<your MeaningCloud API Key>
 ```
 
 ### run server
